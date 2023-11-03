@@ -11,6 +11,7 @@ function uniClassic(tokenSet, tokenBuy, buyingAmount, tokenSell) {
     } else if (buyingAmount > tokenSet[tokenBuy]) {
         return console.log("There is no enough liquidity in the pool.");
     }
+    
     let theoreticalPrice = tokenSet[tokenSell] / tokenSet[tokenBuy];
     tokenSet[tokenBuy] -= buyingAmount;
     let payingAmount = (product / tokenSet[tokenBuy]) - tokenSet[tokenSell];
